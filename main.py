@@ -10,21 +10,25 @@ __version__ = "0.1.0"
 
 
 def json2xml(filename):
+    """Function that converts json files to xml files"""
+
     print("Converting {}...".format(filename), end="")
-    
+
     with open(filename, "r") as input_file:
         xmlstring = json.loads(input_file.read())
         xmlstring = dicttoxml.dicttoxml(xmlstring, attr_type=False)
-        
+
     with open("converted_" + filename.replace(".json", ".xml"), "w") as output_file:
         output_file.write(str(xmlstring, "utf-8"))
-    
+
     print("...done!")
 
 
 def xml2json(filename):
+    """Function that converts xml files to json files"""
+
     print("Converting {}...".format(filename), end="")
-    
+
     with open(filename, "r") as input_file:
         jsonstring = xmltodict.parse(input_file.read())
         jsonstring = json.dumps(jsonstring)
@@ -36,6 +40,7 @@ def xml2json(filename):
 
 
 if __name__ == "__main__":
+    # Parse all program arguments at runtime
     for arg in sys.argv[1:]:
         ext = arg.split(".")[len(arg.split("."))-1]
         if ext == "json":
