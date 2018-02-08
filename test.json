@@ -1,0 +1,10 @@
+{
+  "json" : "good",
+  "xml" : "bad, very bad!",
+  "python" : [
+    {
+      "it" : "is",
+      "so" : "good!"
+    }
+  ]
+}
