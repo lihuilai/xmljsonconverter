@@ -1,6 +1,6 @@
 # xmljsonconverter
 
-Simple Python xml2json, json2xml conconverter
+Simple Python xml2json, json2xml converter
 
 ### Usage
 
